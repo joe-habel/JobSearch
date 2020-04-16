@@ -8,7 +8,7 @@ company = QueryArgument('rbc', str, requires='jcid', disp_name="Compay Name")
 company_id = QueryArgument('jcid', str, requires='rbc', disp_name="Company id")
 job_type = QueryArgument('jt', str, choices=('fulltime', 'parttime', 'contract', 'internship', 'temporary', 'commission'), disp_name="Job Type")
 experience = QueryArgument('explvl', str, choices=('entry_level', 'mid_level', 'senior_level'), disp_name="Experience Level")
-start = QueryArgument('start', int, disp_name="start")
+start = QueryArgument('start', int, required=True, value=0, disp_name="start")
 
 class SimpleIndeedQuery(Query):
     _kwargs = {
